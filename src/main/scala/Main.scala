@@ -3,14 +3,15 @@ import provide.locations._
 
 object Main {
   def main(args: Array[String]): Unit = {
-    println("Glatzau -> Jagerberg")
+    println("Glatzau -> St Peter")
     loadAllNeighbors()
     val myarr:Array[Location] = Array(Glatzau,Wolfsberg,StStefan,Wetzelsdorf,Ungerdorf,Gaberling,Glojach,Grasdorf,Zehensdorf,Metterssdorf,StPeter,Unterzirknitz,Jagerberg)
-    var astarlavista = Astar(myarr.asInstanceOf[Array[Node]],Glatzau,Jagerberg)
+    var astarlavista = Astar(myarr.asInstanceOf[Array[Node]], Glatzau, StPeter)
     println(astarlavista.toString())
     println("Fertig")
 
 
+    println("A* for a grid")
     var bbarr: Array[Array[Boolean]] = Array()
     bbarr :+= Array(true, true, false, false, false, false, true, true)
     bbarr :+= Array(true, true, true, true, true, false, true, false)
