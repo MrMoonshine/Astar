@@ -59,7 +59,7 @@ case class Astar(data_i:Array[Node],start_i:Node,goal_i:Node){
   }
 
   private def reconstructPath(current_i:Node): List[Option[Node]] ={
-    println("Reconstruct");
+    //println("Reconstruct");
     var current = current_i
     var path_s = List[Option[Node]](Some(current))
     gSum = current.gScore
@@ -72,7 +72,7 @@ case class Astar(data_i:Array[Node],start_i:Node,goal_i:Node){
       if(current.cameFrom.eq(None)){
         throw new Exception("Insufficient Node data")
       }
-      println(s"${current.name} | gScore: ${current.gScore} | fScore: ${current.fScore} | cameFrom: ${current.cameFrom.get.name}")
+      //println(s"${current.name} | gScore: ${current.gScore} | fScore: ${current.fScore} | cameFrom: ${current.cameFrom.get.name}")
       current = current.cameFrom.get
       path_s :+= Some(current)
     }
@@ -121,7 +121,7 @@ breakable{
         current.neighbors(n).get.cameFrom = Some(current)
         current.neighbors(n).get.gScore = tentative_gScore
         current.neighbors(n).get.fScore = tentative_gScore + heuristic(current.neighbors(n).get)
-        println(s"${current.neighbors(n).get.name} ${current.neighbors(n).get.gScore} can be reached over ${current.name} ${current.gScore}")
+        //println(s"${current.neighbors(n).get.name} ${current.neighbors(n).get.gScore} can be reached over ${current.name} ${current.gScore}")
         //if it doesn't exist in the open set add it
         if(!openSet.exists(y => {y.get.position.equals(current.neighbors(n).get.position)})){
           openSet :+= current.neighbors(n)

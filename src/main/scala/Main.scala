@@ -1,39 +1,31 @@
 import astar.{Astar, Grid, Location, Node}
 import provide.locations._
 
-import scala.util.Random
-
 object Main {
   def main(args: Array[String]): Unit = {
     println("Glatzau -> Jagerberg")
+    loadAllNeighbors()
     val myarr:Array[Location] = Array(Glatzau,Wolfsberg,StStefan,Wetzelsdorf,Ungerdorf,Gaberling,Glojach,Grasdorf,Zehensdorf,Metterssdorf,StPeter,Unterzirknitz,Jagerberg)
     var astarlavista = Astar(myarr.asInstanceOf[Array[Node]],Glatzau,Jagerberg)
     println(astarlavista.toString())
     println("Fertig")
 
-    val randomizer = new Random(100)
 
     var bbarr: Array[Array[Boolean]] = Array()
-    for (n <- 0 until 16) {
-      var barr: Array[Boolean] = Array()
-      for (m <- 0 until 20) {
-        barr :+= randomizer.nextBoolean()
-      }
-      bbarr :+= barr
-    }
-
-    bbarr(0)(0) = true
-    bbarr(15)(19) = true
+    bbarr :+= Array(true, true, false, false, false, false, true, true)
+    bbarr :+= Array(true, true, true, true, true, false, true, false)
+    bbarr :+= Array(false, true, false, false, true, false, false, true)
+    bbarr :+= Array(false, true, false, true, true, true, false, false)
+    bbarr :+= Array(true, false, false, false, false, false, true, true)
+    bbarr :+= Array(true, true, false, false, false, false, true, true)
+    bbarr :+= Array(false, true, false, false, true, true, true, true)
+    bbarr :+= Array(true, false, true, true, true, false, true, true)
 
     val myg = new Grid(bbarr)
     val griddatstruc = myg.build()
     println(myg.toString())
 
-    for (n <- griddatstruc) {
-      println(n.toString())
-    }
-
-    val astarix = Astar(griddatstruc, griddatstruc(0), griddatstruc(9))
+    val astarix = Astar(griddatstruc, griddatstruc(0), griddatstruc.last)
     println(astarix.toString())
   }
 }

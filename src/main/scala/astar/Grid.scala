@@ -53,7 +53,7 @@ class Grid(grid_i:Array[Array[Boolean]],diagonal:Boolean = true) {
 
     for(i <- 0 until width; j <- 0 until height){
       for(n <- getValidGridNeighbors(i,j)){
-        if (grid_i(n(0))(n(1)) && grid_i(i)(j)) {
+        if (grid_i(n(0))(n(1))) {
           try {
             val p1 = arr2d(i)(j).get.position
             val p2 = arr2d(n(0))(n(1)).get.position
