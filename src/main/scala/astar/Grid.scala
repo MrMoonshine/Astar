@@ -39,7 +39,7 @@ class Grid(grid_i:Array[Array[Boolean]],diagonal:Boolean = true) {
     val deltaX:Double = a_i.x - b_i.x
     val deltaY:Double = a_i.y - b_i.y
     //println(s"deltaX: $deltaX ; deltaY $deltaY")
-    Math.sqrt(Math.pow(deltaX,2) + Math.pow(deltaY,2))/1000
+    Math.sqrt(Math.pow(deltaX,2) + Math.pow(deltaY,2))
   }
 
   def build(): Array[Node] = {
