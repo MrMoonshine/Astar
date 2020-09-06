@@ -7,7 +7,7 @@ case class Astar(data_i:Array[Node],start_i:Node,goal_i:Node){
   private var goal = goal_i
   private var openSet:List[Option[Node]] = List()
   private val startId:Int = setStarter()
-  var path:List[Option[Node]] = List[Option[Node]]()
+  private var path: List[Option[Node]] = List[Option[Node]]()
   var fSum:Double = 0
   var gSum:Double = 0
 
@@ -77,6 +77,10 @@ case class Astar(data_i:Array[Node],start_i:Node,goal_i:Node){
       path_s :+= Some(current)
     }
     throw new Exception("Path not traceable")
+  }
+
+  def getPath(): List[Option[Node]] = {
+    path
   }
 
   override def toString(): String = {

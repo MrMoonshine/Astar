@@ -6,7 +6,7 @@ object Main {
     println("Glatzau -> St Peter")
     loadAllNeighbors()
     val myarr:Array[Location] = Array(Glatzau,Wolfsberg,StStefan,Wetzelsdorf,Ungerdorf,Gaberling,Glojach,Grasdorf,Zehensdorf,Metterssdorf,StPeter,Unterzirknitz,Jagerberg)
-    var astarlavista = Astar(myarr.asInstanceOf[Array[Node]], Glatzau, StPeter)
+    val astarlavista = Astar(myarr.asInstanceOf[Array[Node]], Glatzau, StPeter)
     println(astarlavista.toString())
     println("Fertig")
 
