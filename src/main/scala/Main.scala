@@ -31,7 +31,7 @@ object Main {
     println(c)
 
     val myarr:Array[Location] = Array(Glatzau,Wolfsberg,StStefan,Wetzelsdorf,Ungerdorf,Gaberling,Glojach,Grasdorf,Zehensdorf,Metterssdorf,StPeter,Unterzirknitz,Jagerberg)
-    var astarlavista = Astar(myarr.asInstanceOf[Array[Node]],Wetzelsdorf,StPeter)
+    var astarlavista = Astar(myarr.asInstanceOf[Array[Node]],Glatzau,Jagerberg)
     println(astarlavista.toString())
   }
 }
