@@ -1,0 +1,4 @@
+[debug] Acquiring lock on file C:\Users\mrmoo\IdeaProjects\Astar\project\target\.sbt-compilation-infos\astar-compile\.sbt-idea-lock ...
+[warn] 14 deprecations (since 2.13.3); re-run with -deprecation for details
+[warn] one warning found
+[debug] Releasing lock on file C:\Users\mrmoo\IdeaProjects\Astar\project\target\.sbt-compilation-infos\astar-compile\.sbt-idea-lock.

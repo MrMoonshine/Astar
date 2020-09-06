@@ -1,0 +1,20 @@
+[debug] [watch] [astar / Compile / run] Found inputs: C:\Users\mrmoo\IdeaProjects\Astar\*.{java,scala},C:\Users\mrmoo\IdeaProjects\Astar\src\main\java\**\*.{java,scala},C:\Users\mrmoo\IdeaProjects\Astar\src\main\resources\**\*,C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\**\*.{java,scala},C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala-2.13\**\*.{java,scala}
+[info] 1. Monitoring source files for astar/run -deprecation...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] astar / Compile / run - Accepted event for C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala
+[debug] Received Update(C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] astar / Compile / run - Accepted event for C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala
+[debug] Received Update(C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] astar / Compile / run - Accepted event for C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala
+[debug] Received Update(C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))
+[debug] Received event for path C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala
+[debug] Received event for path C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala
+[debug] Creating update event for modified C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala (previous stamp: Hash(511329d7df6dc46d318f21047784db885ef0529b), current stamp: Hash(cfb48b6073377abe71e8aa6ea8b22d27587d6355))
+[debug] Received file event actions: C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala -> Trigger. Returning: (Update(C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala, 2020-Sep.-06 13:50:27.397 CET),Trigger)
+[info] Build triggered by C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala. Running 'run -deprecation'.
+[debug] [watch] [debug] Received file event Trigger for Update(C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala, 2020-Sep.-06 13:50:27.397 CET).
+[info] 2. Monitoring source files for astar/run -deprecation...
+[info]    Press <enter> to interrupt or '?' for more options.
+[debug] Discarding entry for recently updated path C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Node.scala. This event occurred 3 ms since the last event for this path.
+[debug] [watch] [debug] Received input event: Run().
+[debug] [watch] [debug] Received input event: Run().
