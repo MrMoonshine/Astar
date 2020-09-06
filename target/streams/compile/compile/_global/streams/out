@@ -1,6 +1,2 @@
 [debug] Acquiring lock on file C:\Users\mrmoo\IdeaProjects\Astar\project\target\.sbt-compilation-infos\astar-compile\.sbt-idea-lock ...
-[error] C:\Users\mrmoo\IdeaProjects\Astar\src\main\scala\astar\Grid.scala:40:3: identifier expected but 'def' found.
-[error]   def build(): Array[Node] = {
-[error]   ^
-[error] one error found
 [debug] Releasing lock on file C:\Users\mrmoo\IdeaProjects\Astar\project\target\.sbt-compilation-infos\astar-compile\.sbt-idea-lock.

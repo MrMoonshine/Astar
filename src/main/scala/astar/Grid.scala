@@ -43,7 +43,7 @@ class Grid(grid_i:Array[Array[Boolean]],diagonal:Boolean = true) {
   }
 
   def build(): Array[Node] = {
-    var arr2d:Array[Array[Option[Node]]] = Array()
+    var arr2d: Array[Array[Option[Node]]] = Array.ofDim(width, height)
     var oarr:Array[Node] = Array()
     for(i <- 0 until width; j <- 0 until height){
       arr2d(i)(j) = Some(new Node(new Point(i * 10,j * 10)){
@@ -53,8 +53,14 @@ class Grid(grid_i:Array[Array[Boolean]],diagonal:Boolean = true) {
 
     for(i <- 0 until width; j <- 0 until height){
       for(n <- getValidGridNeighbors(i,j)){
-        if(grid_i(n(0))(n(1))){
-          arr2d(i)(j).get.addNeighbor()
+        if (grid_i(n(0))(n(1)) && grid_i(i)(j)) {
+          try {
+            val p1 = arr2d(i)(j).get.position
+            val p2 = arr2d(n(0))(n(1)).get.position
+            arr2d(i)(j).get.addNeighbor(arr2d(n(0))(n(1)).get, distance(p1, p2))
+          } catch {
+            case e: Any => ;
+          }
         }else{
           arr2d(n(0))(n(1)) = None
         }
@@ -62,13 +68,29 @@ class Grid(grid_i:Array[Array[Boolean]],diagonal:Boolean = true) {
     }
 
     for(i <- 0 until width; j <- 0 until height){
-      oarr :+= arr2d(i)(j)
+      arr2d(i)(j) match {
+        case Some(s) => oarr :+= s
+        case None => ;
+      }
     }
     oarr
   }
 
   override def toString: String = {
-    "Grid!!!"
+    var outstr: String = ""
+    for (i <- 0 until width) {
+      for (j <- 0 until height) {
+        if (grid_i(i)(j)) {
+          outstr += "_"
+        } else {
+          outstr += "#"
+        }
+      }
+      outstr +=
+        """
+          |""".stripMargin
+    }
+    outstr
   }
 
   if(height < 1 || width < 1){
